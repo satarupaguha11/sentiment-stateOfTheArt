@@ -9,7 +9,9 @@ def main():
 	word_ngrams = config.word_ngrams
 	manual_lexicons = config.manual_lexicons
 	n=config.n
-	test_features = generate_features('test',n,word_ngrams,manual_lexicons)
+	emoticons = config.emoticons
+	last_senti_word = config.last_senti_word
+	test_features = generate_features('test',n,word_ngrams,manual_lexicons,emoticons,last_senti_word)
 	test_labels = load_pickle("../data/intermediate/test_labels.pkl")
 	print "Feature matrix dimensions: "+str(test_features.shape)
 	clf = load_pickle("../data/intermediate/classifier.model")
