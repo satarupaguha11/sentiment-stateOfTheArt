@@ -13,3 +13,5 @@ def display_confusion_matrix(confusion_matrix):
 	print "Precision\t"+str(confusion_matrix[0][0])+'\t'+str(confusion_matrix[0][1])+'\t'+str(confusion_matrix[0][2])
 	print "Recall   \t"+str(confusion_matrix[1][0])+'\t'+str(confusion_matrix[1][1])+'\t'+str(confusion_matrix[1][2])
 	print "F-measure\t"+str(confusion_matrix[2][0])+'\t'+str(confusion_matrix[2][1])+'\t'+str(confusion_matrix[2][2])
+
+	print "Average F-measure = "+ str((confusion_matrix[2][0]+confusion_matrix[2][1]+confusion_matrix[2][2])/float(3))
