@@ -7,4 +7,48 @@ unigrams, C = 0.025 -> 0.5619
 Precision	0.409756097561	0.57459379616	0.781150159744
 Recall   	0.460273972603	0.788247213779	0.471098265896
 F-measure	0.433548387097	0.664673216574	0.587740384615
+------------------------------------------------------------------------------------------------------------------
+
+On SemEval 2013 test data
+
+vocabulary created on only 2014 data,
+unigrams, C = 0.025 -> 0.54578
+         	Negative     	Positive     	Neutral
+Precision	0.449350649351	0.568955890564	0.714113389626
+Recall   	0.368869936034	0.788699690402	0.475884244373
+F-measure	0.405152224824	0.661044437236	0.57115291847
+----------------------------------------------------------
+On SemEval 2013 test data
+
+vocabulary created on only 2014 data,
+unigrams+manual lexicons (no. of positive tokens & no. of neg tokens on Bing Liu), C = 0.025 -> 0.5722
+The confusion matrix is
+         	Negative     	Positive     	Neutral
+Precision	0.483253588517	0.582046883934	0.73508353222
+Recall   	0.430703624733	0.787925696594	0.495176848875
+F-measure	0.455467869222	0.669516606379	0.591738712776
+-----------------------------------------------------------
+On SemEval 2013 test data
+
+vocabulary created on only 2014 data,
+unigrams+manual lexicons (no. of positive tokens & no. of neg tokens on Bing Liu)
+lowercased while matching manual lexicons
+C = 0.025 -> 0.5721
+         	Negative     	Positive     	Neutral
+Precision	0.481012658228	0.585870189546	0.73417721519
+Recall   	0.405117270789	0.789473684211	0.512861736334
+F-measure	0.439814814815	0.672601384768	0.603880738287
+------------------------------------------------------------
+On SemEval 2013 test data
+
+vocabulary created on only 2014 data,
+unigrams+manual lexicons (no. of positive tokens & no. of neg tokens on Bing Liu)
+lowercased both tokenization and lexicons
+C = 0.025
+         	Negative     	Positive     	Neutral
+Precision	0.494897959184	0.586919104991	0.732183908046
+Recall   	0.413646055437	0.791795665635	0.512057877814
+F-measure	0.450638792102	0.67413509061	0.602649006623
+Average F-measure =0.575807629778
+
 
