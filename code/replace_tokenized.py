@@ -18,6 +18,7 @@ def replace(tokenized):
 	for sample in tokenized:
 		tokens = list()
 		for token in sample:
+			token = token.lower()
 			if isusername(token):
 				token = "@mention"
 			elif ishashtag(token):
