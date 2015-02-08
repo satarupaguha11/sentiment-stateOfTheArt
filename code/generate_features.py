@@ -17,6 +17,7 @@ def compute_manual_lexicons(sample):
 	num_pos_tokens = 0
 	num_neg_tokens = 0
 	for unigram in sample:
+		unigram = unigram.lower()
 		if unigram in bingliu_lexicon_dictionary['positive']:
 			num_pos_tokens+=1
 		elif unigram in bingliu_lexicon_dictionary['negative']:
