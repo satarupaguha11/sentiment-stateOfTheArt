@@ -16,7 +16,7 @@ def main():
 			vocab = load_pickle("../data/intermediate/trigram_dict.pkl")
 		elif n==4:
 			vocab = load_pickle("../data/intermediate/fourgram_dict.pkl")
-	train_features = generate_features('train',vocab,n,word_ngrams)
+	train_features = generate_features('train',n,word_ngrams)
 	train_labels = load_pickle("../data/intermediate/train_labels.pkl")
 	print "Feature matrix dimensions: "+str(train_features.shape)
 	clf = LinearSVC(C=config.C, class_weight='auto')
