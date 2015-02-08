@@ -1,7 +1,7 @@
 import cPickle as pickle
 
 f_train = open("../../data/input/train.txt", "r")
-f_test = open("../../data/input/test.txt", "r")
+f_test = open("../../data/input/test13.txt", "r")
 train_labels = list()
 test_labels = list()
 
