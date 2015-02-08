@@ -7,8 +7,8 @@ def compute_n_gram(sample,vocab,n):
 	tokens = ngrams(sample,n)
 	#print tokens
 	for token in tokens:
-		#print token
-		feature_vector[vocab[token]] = 1
+		if token in vocab:
+			feature_vector[vocab[token]] = 1
 	return feature_vector
 
 def generate_features(split,vocab,n,word_ngrams):
