@@ -1,1 +1,10 @@
+On SemEval 2014 test data
+
 unigrams, C = 1.0 -> 0.5374
+
+unigrams, C = 0.025 -> 0.5619
+         	Negative     	Positive     	Neutral
+Precision	0.409756097561	0.57459379616	0.781150159744
+Recall   	0.460273972603	0.788247213779	0.471098265896
+F-measure	0.433548387097	0.664673216574	0.587740384615
+

@@ -2,17 +2,16 @@ from helper import *
 from nltk.util import ngrams
 from numpy import *
 
-def compute_n_gram(sample,vocab):
+def compute_n_gram(sample,vocab,n):
 	feature_vector = zeros((len(vocab)),dtype="int32")
-	tokens = ngrams(sample,1)
+	tokens = ngrams(sample,n)
 	#print tokens
 	for token in tokens:
 		#print token
 		feature_vector[vocab[token]] = 1
 	return feature_vector
 
-
-def generate_features(split,vocab,word_ngrams):
+def generate_features(split,vocab,n,word_ngrams):
 	tokenized = load_pickle("../data/intermediate/"+split+"_tokenized_replaced.pkl")
 	#vocab = load_pickle("../data/intermediate/unigram_dict.pkl")
 	n_samples = len(tokenized)
@@ -25,6 +24,6 @@ def generate_features(split,vocab,word_ngrams):
 		sample = tokenized[sample_no]
 		#print sample
 		if word_ngrams == True:
-			ngram_features = compute_n_gram(sample,vocab)
+			ngram_features = compute_n_gram(sample,vocab,n)
 		feature_matrix[sample_no,:] = ngram_features
 	return feature_matrix
