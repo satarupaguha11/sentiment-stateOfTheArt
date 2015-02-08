@@ -11,9 +11,18 @@ def compute_n_gram(sample,vocab,n):
 			feature_vector[vocab[token]] = 1
 	return feature_vector
 
-def generate_features(split,vocab,n,word_ngrams):
+def generate_features(split,n,word_ngrams):
 	tokenized = load_pickle("../data/intermediate/"+split+"_tokenized_replaced.pkl")
-	#vocab = load_pickle("../data/intermediate/unigram_dict.pkl")
+	if word_ngrams == True:
+		if n==1:
+			vocab = load_pickle("../data/intermediate/unigram_dict.pkl")
+		elif n==2:
+			vocab = load_pickle("../data/intermediate/bigram_dict.pkl")
+		elif n==3:
+			vocab = load_pickle("../data/intermediate/trigram_dict.pkl")
+		elif n==4:
+			vocab = load_pickle("../data/intermediate/fourgram_dict.pkl")
+
 	n_samples = len(tokenized)
 	n_features = 0
 	if word_ngrams == True:
