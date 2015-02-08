@@ -7,8 +7,9 @@ from evaluate import *
 def main():
 	
 	word_ngrams = config.word_ngrams
+	manual_lexicons = config.manual_lexicons
 	n=config.n
-	test_features = generate_features('test',n,word_ngrams)
+	test_features = generate_features('test',n,word_ngrams,manual_lexicons)
 	test_labels = load_pickle("../data/intermediate/test_labels.pkl")
 	print "Feature matrix dimensions: "+str(test_features.shape)
 	clf = load_pickle("../data/intermediate/classifier.model")

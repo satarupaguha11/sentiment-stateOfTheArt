@@ -6,17 +6,9 @@ from generate_features import *
 def main():
 	
 	word_ngrams = config.word_ngrams
+	manual_lexicons = config.manual_lexicons
 	n=config.n
-	if word_ngrams == True:
-		if n==1:
-			vocab = load_pickle("../data/intermediate/unigram_dict.pkl")
-		elif n==2:
-			vocab = load_pickle("../data/intermediate/bigram_dict.pkl")
-		elif n==3:
-			vocab = load_pickle("../data/intermediate/trigram_dict.pkl")
-		elif n==4:
-			vocab = load_pickle("../data/intermediate/fourgram_dict.pkl")
-	train_features = generate_features('train',n,word_ngrams)
+	train_features = generate_features('train',n,word_ngrams,manual_lexicons)
 	train_labels = load_pickle("../data/intermediate/train_labels.pkl")
 	print "Feature matrix dimensions: "+str(train_features.shape)
 	clf = LinearSVC(C=config.C, class_weight='auto')
