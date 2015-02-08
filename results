@@ -41,7 +41,7 @@ F-measure	0.439814814815	0.672601384768	0.603880738287
 ------------------------------------------------------------
 On SemEval 2013 test data
 
-vocabulary created on only 2014 data,
+vocabulary created on 2013 data :)
 unigrams+manual lexicons (no. of positive tokens & no. of neg tokens on Bing Liu)
 lowercased both tokenization and lexicons
 C = 0.025
@@ -50,5 +50,21 @@ Precision	0.494897959184	0.586919104991	0.732183908046
 Recall   	0.413646055437	0.791795665635	0.512057877814
 F-measure	0.450638792102	0.67413509061	0.602649006623
 Average F-measure =0.575807629778
+------------------------------------------------------------
+Same as before. Added emoticon features
+
+         	Negative     	Positive     	Neutral
+Precision	0.496124031008	0.585533869116	0.728310502283
+Recall   	0.409381663113	0.789473684211	0.512861736334
+F-measure	0.448598130841	0.67237969677	0.601886792453
+Average F-measure = 0.574288206688
+------------------------------------------------------------
+Removed emoticon features. Rest same plus added last sentiment word features. so finally unigrams+manual lexicon+last senti word
+
+         	Negative     	Positive     	Neutral
+Precision	0.497435897436	0.587155963303	0.731343283582
+Recall   	0.413646055437	0.792569659443	0.512057877814
+F-measure	0.451688009313	0.674571805007	0.602364066194
+Average F-measure = 0.576207960171
 
 
