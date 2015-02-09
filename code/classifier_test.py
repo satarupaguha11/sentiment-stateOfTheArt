@@ -11,7 +11,11 @@ def main():
 	n=config.n
 	emoticons = config.emoticons
 	last_senti_word = config.last_senti_word
-	test_features = generate_features('test',n,word_ngrams,manual_lexicons,emoticons,last_senti_word)
+	pmi_unigram_lexicons = config.pmi_unigram_lexicons
+	hashtag = config.hashtag
+	grapheme = config.grapheme
+	negation = config.negation
+	test_features = generate_features('test',n,word_ngrams,manual_lexicons,emoticons,last_senti_word,pmi_unigram_lexicons,hashtag,grapheme,negation)
 	test_labels = load_pickle("../data/intermediate/test_labels.pkl")
 	print "Feature matrix dimensions: "+str(test_features.shape)
 	clf = load_pickle("../data/intermediate/classifier.model")
